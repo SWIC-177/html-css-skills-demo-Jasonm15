@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="style.css" />
     <title>Contact Me</title>
   </head>
-  <body>
-    <header>
+  <body class="text bg-sky-950 text-white">
+    <header
+      class="bg-indigo-800 p-6 text-center text-2xl shadow-lg shadow-black"
+    >
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -16,46 +18,67 @@
       </nav>
     </header>
 
-    <div>
-      <h1>Contact Me</h1>
+    <div class="p-8 text-xl">
+      <h1 class="mb-4">Contact Me</h1>
       <p>Feel free to get in touch with any questions or inquiries.</p>
     </div>
 
-    <form method="post">
+    <form
+      class="flex flex-col gap-y-4 p-8 text-black [&>input]:rounded-xl [&>label]:sr-only"
+    >
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" placeholder="Your Name" />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" placeholder="Email" />
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <label for="message" class="rounded-4xl">Message:</label>
+      <textarea id="message" placeholder="Message"></textarea>
 
-      <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="male" />
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female" />
-      <label for="female">Female</label>
+      <div class="space-y-4 rounded-lg bg-white p-6">
+        <h2 class="text-lg font-semibold text-gray-900">
+          Select Your Interests
+        </h2>
+        <div class="flex items-center">
+          <input
+            type="checkbox"
+            id="coding"
+            name="interests"
+            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          />
+          <label for="coding" class="ml-2 block text-sm text-gray-900"
+            >Coding</label
+          >
+        </div>
+        <div class="flex items-center">
+          <input
+            type="checkbox"
+            id="design"
+            name="interests"
+            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          />
+          <label for="design" class="ml-2 block text-sm text-gray-900"
+            >Design</label
+          >
+        </div>
+        <div class="flex items-center">
+          <input
+            type="checkbox"
+            id="travel"
+            name="interests"
+            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          />
+          <label for="travel" class="ml-2 block text-sm text-gray-900"
+            >Travel</label
+          >
+        </div>
+      </div>
 
-      <label>Interests:</label>
-      <input type="checkbox" id="coding" name="interests" value="coding" />
-      <label for="coding">Coding</label>
-      <input type="checkbox" id="design" name="interests" value="design" />
-      <label for="design">Design</label>
-      <input type="checkbox" id="travel" name="interests" value="travel" />
-      <label for="travel">Travel</label>
-
-      <label for="department">Department:</label>
-      <select id="department" name="department">
-        <option value="sales">Sales</option>
-        <option value="support">Support</option>
-        <option value="development">Development</option>
-        <option value="marketing">Marketing</option>
-      </select>
-      <br />
-      <br />
-
-      <input type="submit" value="Submit" />
+      <input
+        type="submit"
+        value="Submit"
+        class="rounded bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+      />
     </form>
   </body>
 </html>
