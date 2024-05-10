@@ -53,63 +53,32 @@
       <p>Feel free to get in touch with any questions or inquiries.</p>
     </div>
 
-    <form class="flex flex-col gap-y-4 p-8  text-black [&_input]:rounded-xl [&_label]:sr-only  [&_textarea]:rounded-xl   ">
+    <form class="flex flex-col gap-y-4 p-8  text-black [&_input]:rounded-lg [&_label]:sr-only  [&_textarea]:rounded-xl   ">
 
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" placeholder="Your Name" />
     </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Email" />
-    </div>
+
     <div>
       <label for="phone">Phone:</label>
       <input type="phone" id="phone" placeholder="Phone" />
     </div>
+    
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Email" />
+    </div>
+
+    
+    
+
     <div>
       <label for="message" class="rounded-4xl">Message:</label>
       <textarea id="message" placeholder="Message"></textarea>
     </div>
 
-      <div class="space-y-4 rounded-lg bg-white p-6">
-        <h2 class="text-lg font-semibold text-gray-900">
-          Select Your Interests
-        </h2>
-        <div class="flex items-center">
-          <input-checkbox
-            type="checkbox"
-            id="coding"
-            name="interests"
-            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          />
-          <name for="coding" class="ml-2 block text-sm text-gray-900"
-            >Coding</name
-          >
-        </div>
-        <div class="flex items-center">
-          <input-checkbox
-            type="checkbox"
-            id="design"
-            name="interests"
-            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          />
-          <name for="design" class="ml-2 block text-sm text-gray-900"
-            >Design</name
-          >
-        </div>
-        <div class="flex items-center">
-          <input-checkbox
-            type="checkbox"
-            id="travel"
-            name="interests"
-            class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-          />
-          <name for="travel" class="ml-2 block text-sm text-gray-900"
-            >Travel</name
-          >
-        </div>
-      </div>
+      
 
       <input
         type="submit"
