@@ -5,4 +5,5 @@ const formEls =[
     document.querySelector("#message"),
 ];
 
-console.log(formEls);
+const submitBtn = document.querySelector("Button[type='submit']");
+
