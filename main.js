@@ -16,6 +16,6 @@ formElements.forEach(element => {
   });
 
   element.addEventListener("focus", (event) => {
-    CONCEAL_ERROR(event.target); // Always hide error on focus for a clean slate
+    CONCEAL_ERROR(event.target); 
   });
 });
