@@ -15,7 +15,11 @@ formElements.forEach(element => {
     }
   });
 
-  element.addEventListener("focus", (event) => {
-    CONCEAL_ERROR(event.target); 
+  element.addEventListener("input", (event) => {
+   
+    const validation = VALIDATIONS.find(v => v.fieldId === event.target.id);
+    if (validation && validation.validate(event.target.value)) {
+      CONCEAL_ERROR(event.target);
+    }
   });
 });
