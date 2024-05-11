@@ -1,15 +1,21 @@
-import { ERRORS } from "./src/libs";
-console.log(ERRORS);
+import { CONCEAL_ERROR, DISPLAY_ERROR, VALIDATIONS } from "./src/libs";
 
-const formEls =[ 
-    ...Array.from(document.querySelectorAll("input")),
-    document.querySelector("#message"),
+const formElements = [
+  ...document.querySelectorAll("input"),
+  document.querySelector("#message"),
 ];
 
-const submitBtn = document.querySelector("Button[type='submit']");
-
-formEls.forEach((el) => {
-    el.addEventListener("blur", (e) => {
-      console.log(ERRORS.find(error => error.id === e.target.id).validate(e.target.value));
-    });
+formElements.forEach(element => {
+  element.addEventListener("blur", (event) => {
+    const validation = VALIDATIONS.find(v => v.fieldId === event.target.id);
+    if (validation && !validation.validate(event.target.value)) {
+      DISPLAY_ERROR(event.target, validation.errorMessage);
+    } else {
+      CONCEAL_ERROR(event.target);
+    }
   });
+
+  element.addEventListener("focus", (event) => {
+    CONCEAL_ERROR(event.target); // Always hide error on focus for a clean slate
+  });
+});
