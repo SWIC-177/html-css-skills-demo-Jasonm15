@@ -53,36 +53,36 @@
       <p>Feel free to get in touch with any questions or inquiries.</p>
     </div>
 
-    <form class="flex flex-col gap-y-4 p-8  text-black [&_input]:rounded-lg [&_label]:sr-only  [&_textarea]:rounded-xl   ">
-
+    <form
+    class="container mx-auto flex max-w-screen-md flex-col gap-4 px-8 py-4 text-black  shadow-lg rounded-lg md:grid md:grid-cols-2 md:gap-6"
+>
     <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" placeholder="Your Name" />
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" id="name" class="min-h-12 rounded p-2 w-full border border-gray-300" placeholder="Your Name" />
     </div>
 
     <div>
-      <label for="phone">Phone:</label>
-      <input type="phone" id="phone" placeholder="Phone" />
-    </div>
-    
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Email" />
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" class="min-h-12 rounded p-2 w-full border border-gray-300" placeholder="Email" />
     </div>
 
     <div>
-      <label for="message" >Message:</label>
-      <textarea id="message" placeholder="Message"></textarea>
+        <label for="phone" class="sr-only">Phone</label>
+        <input type="tel" id="phone" class="min-h-12 rounded p-2 w-full border border-gray-300" placeholder="Phone" />
     </div>
 
-      
+    <div>
+        <label for="message" class="sr-only">Message</label>
+        <textarea id="message" class="h-24 rounded p-2 w-full border border-gray-300" placeholder="Message"></textarea>
+    </div>
 
-      <input
+    <button
         type="submit"
-        value="Submit"
-        class="rounded bg-indigo-600 px-4 py-2 font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
-      />
-    </form>
+        class="col-span-2 mt-4 h-12 max-w-min place-self-center bg-green-500 hover:bg-green-600 focus:bg-green-700 active:bg-green-800 px-4 py-2 text-white rounded shadow"
+    >
+        Submit
+    </button>
+</form>
     <script src="./main.js" type="module"></script>
   </body>
 </html>
