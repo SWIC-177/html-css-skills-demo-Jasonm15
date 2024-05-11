@@ -38,9 +38,9 @@ export const DISPLAY_ERROR = (element, message) => {
   };
   
   export const CONCEAL_ERROR = (element) => {
-    const errorDisplay = element.parentNode.querySelector(".error");
-    if (errorDisplay) {
-      errorDisplay.classList.remove("is-error");
-    }
-  };
-  
+  const errorDisplay = element.parentNode.querySelector(".error");
+  if (errorDisplay) {
+    errorDisplay.classList.remove("is-error"); 
+    errorDisplay.textContent = ''; 
+  }
+};
