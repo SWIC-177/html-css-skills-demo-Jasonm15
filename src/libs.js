@@ -37,4 +37,10 @@ export const DISPLAY_ERROR = (element, message) => {
     errorElement.classList.add("is-error"); 
   };
   
+  export const CONCEAL_ERROR = (element) => {
+    const errorDisplay = element.parentNode.querySelector(".error");
+    if (errorDisplay) {
+      errorDisplay.classList.remove("is-error");
+    }
+  };
   
