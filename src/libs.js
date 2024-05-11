@@ -23,4 +23,18 @@ export const VALIDATIONS = [
   },
 ];
 
-
+export const DISPLAY_ERROR = (element, message) => {
+    const parent = element.parentNode;
+    let errorElement = parent.querySelector(".error");
+  
+    if (!errorElement) {
+      errorElement = document.createElement("span");
+      errorElement.className = "error"; 
+      parent.appendChild(errorElement);
+    }
+  
+    errorElement.textContent = message;
+    errorElement.classList.add("is-error"); 
+  };
+  
+  
